@@ -20,10 +20,10 @@ function Footer() {
             <h3 className="text-xl font-semibold " style={{color:"rgb(15 205 255)"}}>Quick Links</h3>
             <ul className="mt-2 space-y-2">
               <li><a href="/" className="text-gray-400 hover:text-white transition">Home</a></li>
-              <li><a href="/services" className="text-gray-400 hover:text-white transition">Services</a></li>
-              <li><a href="/portfolio" className="text-gray-400 hover:text-white transition">Portfolio</a></li>
+              <li><a href="/service" className="text-gray-400 hover:text-white transition">Services</a></li>
               <li><a href="/blog" className="text-gray-400 hover:text-white transition">Blog</a></li>
-              <li><a href="/contact" className="text-gray-400 hover:text-white transition">Contact</a></li>
+              <li><a href="/contact" className="text-gray-400 hover:text-white transition">Contact Us</a></li>
+              <li><a href="/about" className="text-gray-400 hover:text-white transition">About Us</a></li>
             </ul>
           </div>
 

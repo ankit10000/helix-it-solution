@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaInstagram } from "react-icons/fa6";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF ,FaLinkedin} from "react-icons/fa";
 import { TfiYoutube } from "react-icons/tfi";
 
 function Header() {
@@ -22,9 +22,13 @@ function Header() {
                     </div>
                     <div className="col-span-1 text-right">
                         <h1 className="font-bold text-gray-800 sm:text-sm md:text-base d-flex flex justify-end">
-                            <FaInstagram />
-                            <FaFacebookF style={{"margin-left":"10px","margin-right":"10px"}}/>
-                            <TfiYoutube />
+                        <a href="https://www.instagram.com/helix_it_solution?igsh=NTZpdHdobGozcnJ5"><FaInstagram /></a>
+                        <a href="https://www.facebook.com/profile.php?id=61568130518127"><FaFacebookF style={{"margin-left":"10px","margin-right":"10px"}}/></a>
+                        <a href="https://youtube.com/@helixitsolution?si=vIGUEMlTTyoFPBqF"><TfiYoutube /></a>
+                        <a href="https://www.linkedin.com/company/helix-it-solution/"><FaLinkedin style={{marginLeft:"10px"}} /></a>
+                            
+                            
+                            
                         </h1>
                     </div>
                 </div>
