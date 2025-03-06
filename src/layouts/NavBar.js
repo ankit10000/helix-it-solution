@@ -1,13 +1,14 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { IoIosSearch } from "react-icons/io";
+import Logo from "../Images/CompanyLogo.png"
 
 const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Service', href: '#', current: false },
-  { name: 'Blog', href: '#', current: false },
-  { name: 'Contact Us', href: '#', current: false },
-  { name: 'About Us', href: '#', current: false },
+  { name: 'Home', href: '/', current: true },
+  { name: 'Service', href: '/service', current: false },
+  { name: 'Blog', href: '/blog', current: false },
+  { name: 'Contact Us', href: '/contact', current: false },
+  { name: 'About Us', href: '/about', current: false },
 ]
 
 function classNames(...classes) {
@@ -29,37 +30,40 @@ export default function NavBar() {
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex shrink-0 items-center font-serif bg-orange-400 text-white px-4 py-1 rounded-md text-xl font-bold">
-              {/* <img
-                alt="Your Company"
-                src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
-              /> */}
-              Helix-It-Solution
+            <div className="flex shrink-0 items-center font-serif px-4 py-1 rounded-md text-xl font-bold">
+              <img
+                alt="Helix It Solution"
+                src={Logo}
+                className="h-20 w-auto"
+              />
             </div>
             <div className="hidden sm:ml-10 sm:block">
-              <div className="flex space-x-4">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    aria-current={item.current ? 'page' : undefined}
-                    className={classNames(
-                      item.current ? ' text-orange-400' : 'text-gray-700 hover:text-orange-400',
-                      'rounded-md px-3 py-2  font-bold',
-                    )}
-                    style={{ fontSize: '16px' }}
-                  >
-                    {item.name}
-                  </a>
-                ))}
+              <div className="flex items-center justify-center space-x-4 h-full">
+              {navigation.map((item) => (
+  <a
+    key={item.name}
+    href={item.href}
+    aria-current={item.current ? "page" : undefined}
+    className={classNames(
+      item.current
+        ? "text-[#0FCDFF]" // Applying custom color for active link
+        : "text-gray-700 hover:text-[#0FCDFF]", // Applying custom hover color
+      "rounded-md px-3 py-2 font-bold"
+    )}
+    style={{ fontSize: "16px" }}
+  >
+    {item.name}
+  </a>
+))}
+
               </div>
             </div>
+
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-15">
-          <IoIosSearch size={25}/>
+            <IoIosSearch size={25} />
 
-            
+
           </div>
         </div>
       </div>

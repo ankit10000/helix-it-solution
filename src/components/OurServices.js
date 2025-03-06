@@ -35,8 +35,10 @@ const services = [
 
 function OurServices() {
     return (
-        <div className="container mx-auto my-10 px-4">
-            <h2 className="text-4xl font-bold text-orange-400 text-center">Our Services</h2>
+        <div className="container mx-auto my-32 px-4">
+            <h2 className="text-4xl font-bold text-center uppercase">
+        <span className="text-blue-600">Our</span> Services
+      </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 max-w-6xl mx-auto">
                 {services.map((service, index) => (
                     <div key={index} className="bg-white p-6 h-auto rounded-lg shadow-lg flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
@@ -44,7 +46,7 @@ function OurServices() {
                         <h3 className="text-2xl font-semibold mt-4">{service.title}</h3>
                         <p className="text-gray-700 mt-2 text-sm md:text-base px-2 md:px-4">{service.description}</p>
                         <div className="flex-grow"></div>
-                        <button className='bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600 transition-colors'>Read More</button>
+                        <button className=' text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600 transition-colors' style={{backgroundColor:"rgb(15 205 255)"}}>Read More</button>
                     </div>
                 ))}
             </div>
