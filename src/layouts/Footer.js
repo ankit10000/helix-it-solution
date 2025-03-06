@@ -1,5 +1,7 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { TfiYoutube } from "react-icons/tfi";
+
 
 function Footer() {
     return (
@@ -45,7 +47,7 @@ function Footer() {
                             </a>
                             <a href="https://youtube.com/@helixitsolution?si=vIGUEMlTTyoFPBqF
 " className="bg-gray-700 p-2 rounded-full hover:bg-blue-500 transition">
-                                <FaTwitter size={20} className="text-white" />
+                                <TfiYoutube size={20} className="text-white" />
                             </a>
                             <a href="https://www.linkedin.com/company/helix-it-solution/" className="bg-gray-700 p-2 rounded-full hover:bg-blue-500 transition">
                                 <FaLinkedinIn size={20} className="text-white" />
