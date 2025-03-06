@@ -30,11 +30,9 @@ function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-semibold " style={{color:"rgb(15 205 255)"}}>Contact Us</h3>
-            <p className="mt-2 text-gray-400">123 Business Street, Jaipur, India</p>
-            <p className="text-gray-400">Email: solutionhelixit@gmail.com</p>
-            <p className="text-gray-400">Phone:  7296911651</p>
-            <p className="text-gray-400"> 7737063697</p>
-            <p className="text-gray-400"> 6375722866</p>
+            <p className="mt-2 text-gray-400"><strong >Address</strong>: 302, Third Floor, City Pearl, Opposite Hotel Gangaur(RTDC), VidhayakPuri, Jaipur-302001</p>
+            <p className="text-gray-400"><strong >Email</strong>: solutionhelixit@gmail.com</p>
+            <p className="text-gray-400"><strong >Phone</strong>:  7296911651</p>
             <p className="text-gray-400"> 9636394444</p>
           </div>
 

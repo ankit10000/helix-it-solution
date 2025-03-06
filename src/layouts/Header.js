@@ -18,7 +18,7 @@ function Header() {
                     </div>
                     <div className="col-span-1 grid grid-rows-2 ">
                         <div className="row-span-1"><h2 className="font-bold text-gray-800 sm:text-sm md:text-base">Call us</h2></div>
-                        <div className="row-span-1"><h2 className="text-gray-800 sm:text-sm md:text-sm">7296911651, 7737063697, 6375722866</h2></div>
+                        <div className="row-span-1"><h2 className="text-gray-800 sm:text-sm md:text-sm">7296911651, 9636394444</h2></div>
                     </div>
                     <div className="col-span-1 text-right">
                         <h1 className="font-bold text-gray-800 sm:text-sm md:text-base d-flex flex justify-end">
