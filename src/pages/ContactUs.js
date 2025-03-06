@@ -1,6 +1,9 @@
 import React from "react";
 
 function Contact() {
+  const handleSubmit = () => {
+    alert("Message sent successfully!");
+  };
   return (
     <div className="container mx-auto my-10 px-4">
       <h2 className="text-4xl text-center font-bold text-black uppercase">
@@ -12,23 +15,25 @@ function Contact() {
         {/* Contact Form */}
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h3 className="text-2xl font-semibold text-blue-500 mb-4">Send a Message</h3>
-          <form className="space-y-4">
             <div>
               <label className="block text-gray-700 font-medium">Full Name</label>
-              <input type="text" placeholder="Enter your name" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+              <input required type="text" placeholder="Enter your name" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
             </div>
-            <div>
+            <div className="mt-4">
               <label className="block text-gray-700 font-medium">Email Address</label>
-              <input type="email" placeholder="Enter your email" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+              <input required type="email" placeholder="Enter your email" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
             </div>
-            <div>
+            <div className="mt-4">
+              <label className="block text-gray-700 font-medium">Phone</label>
+              <input required type="tel" placeholder="Enter your phone" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+            <div className="mt-4">
               <label className="block text-gray-700 font-medium">Message</label>
-              <textarea rows="4" placeholder="Enter your message" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+              <textarea required rows="4" placeholder="Enter your message" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
             </div>
-            <button type="submit"style={{backgroundColor:"rgb(15 205 255)"}} className="w-full  text-white px-4 py-2 rounded-lg font-semibold hover:bg-orange-600 transition">
+            <button onClick={handleSubmit} type="submit"style={{backgroundColor:"rgb(15 205 255)"}} className="w-full  text-white px-4 py-2 rounded-lg font-semibold hover:bg-orange-600 transition">
               Send Message
             </button>
-          </form>
         </div>
 
         {/* Contact Info & Google Map */}

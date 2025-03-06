@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import for navigation
+import { useNavigate, useLocation } from "react-router-dom"; // Import useLocation
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { IoIosSearch } from "react-icons/io";
 import Logo from "../Images/CompanyLogo.png";
 
-const navigation = [
-  { name: "Home", href: "/", current: true },
-  { name: "Service", href: "/service", current: false },
-  { name: "Blog", href: "/blog", current: false },
-  { name: "Contact Us", href: "/contact", current: false },
-  { name: "About Us", href: "/about", current: false },
+const navigationItems = [
+  { name: "Home", href: "/" },
+  { name: "Service", href: "/service" },
+  { name: "Blog", href: "/blog" },
+  { name: "Contact Us", href: "/contact" },
+  { name: "About Us", href: "/about" },
 ];
 
 function classNames(...classes) {
@@ -20,14 +20,15 @@ function classNames(...classes) {
 export default function NavBar() {
   const [searchVisible, setSearchVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const navigate = useNavigate(); // Initialize useNavigate for redirection
+  const navigate = useNavigate();
+  const location = useLocation(); // Get current path
 
-  // Handle Enter key press
+  // Handle Enter key press for search
   const handleSearchSubmit = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
       if (searchQuery.trim()) {
-        navigate(`/blog?search=${encodeURIComponent(searchQuery)}`); // Redirect to Blog with search query
+        navigate(`/blog?search=${encodeURIComponent(searchQuery)}`);
         setSearchQuery("");
         setSearchVisible(false);
       }
@@ -49,17 +50,19 @@ export default function NavBar() {
 
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center px-4 py-1 rounded-md text-xl font-bold">
-              <img alt="Helix IT Solution" src={Logo} className="h-14 w-auto" />
+              <a href="/">
+                <img alt="Helix IT Solution" src={Logo} className="h-14 w-auto" />
+              </a>
             </div>
             <div className="hidden sm:ml-10 sm:block">
               <div className="flex items-center justify-center space-x-4 h-full">
-                {navigation.map((item) => (
+                {navigationItems.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    aria-current={item.current ? "page" : undefined}
+                    aria-current={location.pathname === item.href ? "page" : undefined} // Check current page
                     className={classNames(
-                      item.current ? "text-[#0FCDFF]" : "text-gray-700 hover:text-[#0FCDFF]",
+                      location.pathname === item.href ? "text-[#0FCDFF]" : "text-gray-700 hover:text-[#0FCDFF]",
                       "rounded-md px-3 py-2 font-bold"
                     )}
                     style={{ fontSize: "16px" }}
@@ -80,7 +83,7 @@ export default function NavBar() {
                 placeholder="Search Blog..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                onKeyDown={handleSearchSubmit} // Handle Enter key
+                onKeyDown={handleSearchSubmit}
                 autoFocus
               />
             ) : (
@@ -94,14 +97,14 @@ export default function NavBar() {
 
       <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 px-2 pb-3 pt-2">
-          {navigation.map((item) => (
+          {navigationItems.map((item) => (
             <DisclosureButton
               key={item.name}
               as="a"
               href={item.href}
-              aria-current={item.current ? "page" : undefined}
+              aria-current={location.pathname === item.href ? "page" : undefined}
               className={classNames(
-                item.current ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                location.pathname === item.href ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white",
                 "block rounded-md px-3 py-2 text-base font-medium"
               )}
             >
