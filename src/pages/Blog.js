@@ -1,26 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import Digital from  '../Images/Digital.jpg'
+import SEO from  '../Images/SEO.jpeg'
+import Importance from  '../Images/Importance.jpg'
 
 const blogPosts = [
     {
       title: "The Importance of a Well-Designed Website",
       date: "March 6, 2025",
       author: "Admin",
-      img: "https://i.pravatar.cc/50?img=4",
+      img: Importance,
       excerpt: "A well-structured website enhances user experience and boosts business credibility. Learn how to optimize your website for success.",
     },
     {
       title: "SEO Strategies to Rank Higher on Google",
       date: "February 28, 2025",
       author: "SEO Expert",
-      img: "https://i.pravatar.cc/50?img=4",
+      img: SEO,
       excerpt: "Discover top SEO strategies that can help your business website rank on the first page of Google search results.",
     },
     {
       title: "Why Digital Marketing is Essential for Business Growth",
       date: "February 20, 2025",
       author: "Marketing Guru",
-      img: "https://i.pravatar.cc/50?img=4",
+      img: Digital,
       excerpt: "Explore the benefits of digital marketing and how it can help you reach a larger audience and increase sales.",
     },
   ];
@@ -50,7 +53,7 @@ function Blog() {
   return (
     <div className="container mx-auto my-10 px-4">
       <h2 className="text-4xl text-center font-bold text-black uppercase">
-        Latest <span className="text-blue-600">Blog Posts</span>
+        Latest <span className="text-[#0fcdff]">Blog Posts</span>
       </h2>
 
       {query && (
@@ -70,7 +73,7 @@ function Blog() {
               <p className="text-gray-500 text-sm">{post.date} | By {post.author}</p>
               <p className="text-gray-700 mt-2">{post.excerpt}</p>
               <button
-                className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+                className="mt-10 px-8 py-3 text-lg font-semibold text-white rounded-lg bg-gradient-to-r from-[#0fcdff] to-[#0093E9] hover:from-[#0093E9] hover:to-[#0fcdff] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
                 onClick={() => navigate(`/blog/${index + 1}`)} // Redirect to full blog post
               >
                 Read More

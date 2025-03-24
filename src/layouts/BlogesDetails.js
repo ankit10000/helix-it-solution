@@ -50,7 +50,7 @@ function BlogsDetails() {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                     }, 100); // Delay to ensure page transition happens first
                 }}
-                className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition mb-6"
+                className="mt-10 px-8 py-3 text-lg font-semibold text-white rounded-lg bg-gradient-to-r from-[#0fcdff] to-[#0093E9] hover:from-[#0093E9] hover:to-[#0fcdff] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
             >
                 ← Back
             </button>

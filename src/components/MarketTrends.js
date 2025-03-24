@@ -8,7 +8,7 @@ function MarketTrends() {
       {/* Header Section */}
       <div className="text-center">
         <h2 className="text-4xl font-bold text-black uppercase">
-          MARKET <span className="text-blue-600">TRENDS</span>
+          MARKET <span className="text-[#0fcdff]">TRENDS</span>
         </h2>
         <p className="mt-4 text-gray-700 max-w-3xl mx-auto">
           In today's competitive digital landscape, businesses are increasingly relying on all-in-one solutions to streamline their growth. Helix IT Solution bridges the gap by providing tailored, cost-effective services to startups, small businesses, and enterprises alike.
