@@ -14,7 +14,7 @@ const MainSlider = () => {
     return (
         <div className="relative w-full sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] overflow-hidden">
             {/* Permanent Centered Text */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-6 z-10">
+            <div className="absolute top-48  sm:top-40 md:top-56 lg:top-72 xl:top-80 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white  z-10">
                 <h2 className="text-4xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 shadow-lg">
                     Helix It Solution
                 </h2>
