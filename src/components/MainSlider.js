@@ -12,13 +12,13 @@ import { Navigation, Autoplay, EffectFade } from "swiper/modules";
 
 const MainSlider = () => {
     return (
-        <div className="relative w-full">
+        <div className="relative w-full sm:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] overflow-hidden">
             {/* Permanent Centered Text */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-6 z-10">
-                <h2 className="text-4xl md:text-7xl font-bold bg-opacity-50 px-4 py-2 rounded-md" style={{color:"rgb(15 205 255)"}}>
+                <h2 className="text-4xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 shadow-lg">
                     Helix It Solution
                 </h2>
-                <p className="mt-2 text-sm md:text-lg bg-black bg-opacity-50 px-4 py-2 rounded-md">
+                <p className="mt-2 text-sm md:text-lg bg-gradient-to-r from-black via-transparent to-black bg-opacity-60 px-4 py-2 rounded-lg shadow-lg">
                     EMPOWERING BUSINESSES THROUGH INNOVATIVE IT SOLUTIONS
                 </p>
             </div>
@@ -38,10 +38,10 @@ const MainSlider = () => {
                     Slider3
                 ].map((src, index) => (
                     <SwiperSlide key={index} className="relative">
-                        {/* Dark Overlay */}
-                        <div className="absolute inset-0 bg-gray-500 bg-opacity-50"></div>
+                        {/* Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black bg-opacity-40"></div>
                         <img 
-                            className="w-full h-[200px] sm:h-[300px] md:h-[300px] lg:h-[400px] xl:h-[400px] object-cover"
+                            className="w-full h-[400px] sm:h-[400px] md:h-[400px] lg:h-[500px] xl:h-[600px] object-cover transition-all duration-1000 transform hover:scale-105"
                             src={src} 
                             alt={`Slide ${index + 1}`} 
                         />
