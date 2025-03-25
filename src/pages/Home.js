@@ -12,7 +12,7 @@ function Home() {
     <div>
         <MainSlider />
         <OurServices />
-        <ServicesSlider />ß
+        <ServicesSlider />
         <ServiceProvideCommit />
         <MarketTrends />
         <DigitalSolutions />
